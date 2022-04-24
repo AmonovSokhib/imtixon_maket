@@ -1,0 +1,146 @@
+@mixin nav_list{
+    width: 60%;
+    display: flex;
+    list-style: none;
+}
+@mixin nav_etem{
+    font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+}
+@mixin about-us{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+@mixin about-us992{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+@mixin about-us768{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin nav_etem992{
+    font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+}
+@mixin nav_etem768{
+    font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+}
+@mixin talk {
+    text-decoration: none;
+    color: $ColorBlack;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    
+}
+@mixin talk992 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    
+}
+@mixin btn{
+    padding: 17px 57px;
+    background-color: $ColorBg;
+    border-radius: 5px;
+    border: 2px solid $ColorBlack;
+}
+@mixin btn992{
+    padding: 11px 40px;
+    
+}
+@mixin logo{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+}
+@mixin logo992{
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+}
+@mixin button_main {
+    padding: 32px 117px;
+    color:$ColorWhite;
+    background-color: $ColorButton;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 54px;
+}
+@mixin button_main992 {
+    padding: 22px 78px;
+    font-size: 24px;
+    line-height: 36px;
+}
+@mixin button_main767 {
+    padding: 19px 67px;
+    font-size: 18px;
+    line-height: 27px;
+}
+@mixin but_skills {
+    padding: 16px 63px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color:$ColorWhite;
+    background-color: $ColorButton;
+    border-radius: 10px;
+}
+@mixin skill-box1__title{
+    width: 144px;
+    height: 80px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 80px;
+    color: $ColorButton;
+}
+@mixin skill-box_subtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color:$ColorAll_p;
+}
+@mixin but_skills992 {
+    padding: 12px 41px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color:$ColorWhite;
+    background-color: $ColorButton;
+    border-radius: 10px;
+}
+@mixin skill-box1__title992{
+    width: 144px;
+    height: 80px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 80px;
+    color: $ColorButton;
+}
+@mixin skill-box_subtitle992{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color:$ColorAll_p;
+}
+@mixin but_skills320 {
+    padding: 12px 43px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    color:$ColorWhite;
+    background-color: $ColorButton;
+    border-radius: 10px;
+}

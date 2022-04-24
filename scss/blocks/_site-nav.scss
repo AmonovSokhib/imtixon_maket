@@ -1,0 +1,221 @@
+
+
+.site-nav{
+    margin-top: 30px;
+    width: 88%;
+    z-index: 99;
+    
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &__logo{
+        @include logo;
+        &>a{
+            text-decoration: none;
+            color: $ColorBlack;
+        }
+        &> a span{
+            color: $ColorLogo;
+        }
+    }
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        @include nav_list;
+    }
+    &__etem{
+        & a{
+            @include nav_etem;
+            color:$ColorNav;
+            text-decoration: none;
+        }
+    }
+    .btn {
+        
+        @include btn;
+        & a{
+            @include talk;
+        }
+    }
+}
+.nav-taggle{
+    display: none;
+}
+.nav-label{
+    display: none;
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    z-index: 1;
+    right: 0;
+    top: -15px;
+    margin-top: 10px;   
+}
+.nav-label .line{
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    border: 2px solid black;
+    background-color: #39515e;
+    border-radius: 50px;
+    transition: .03s ease;
+}
+.nav-label .line:nth-child(3){
+    width: 30px;
+}
+.nav-label .line-1{
+    top: 0;
+    left: 2px;
+    transform: translate(-50% -50%);
+}
+.nav-label .line-2{
+    top: 25%;
+    left: 2px;
+    transform: translate(-50% -50%);
+}
+.nav-label .line-3{
+    top: 50%;
+    left: 2px;
+    transform: translate(-50% -50%);
+}
+
+
+@media screen and (max-width:993px){
+    
+    .container{
+        max-width: 930px;
+        margin: 0 auto;
+    }
+    .site-nav{
+        margin-top: 30px;
+        width: 100%;
+        
+        
+        &__logo{
+            @include logo992;
+            &>a{
+                text-decoration: none;
+                color: $ColorBlack;
+            }
+            &> a span{
+                color: $ColorLogo;
+            }
+        }
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            @include nav_list;
+        }
+        &__etem{
+            & a{
+                @include nav_etem992;
+                color:$ColorNav;
+                text-decoration: none;
+            }
+        }
+        .btn {
+            
+            @include btn992;
+            & a{
+                @include talk992;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px) {
+    .container{
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .site-nav{
+        margin-top: 30px;
+        width: 95%;
+        height: 400px;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &__logo{
+            position: absolute;
+            left: 0;
+            margin-left: 20px;
+            
+        }
+        &__list{
+            z-index: 1;
+            position: fixed;
+            background-color: #a5d6f1;
+            border-radius: 10px;
+            width: 290px;
+            height: 350px;
+            top: 40px;
+            left: 10px;
+            display: block;
+            margin-top: 50px;
+            transform: translateX(-180%);
+            transition: transform .5s;
+            list-style: none;
+            
+        }
+        &__etem{
+            padding: 10px;
+            & a{
+                @include nav_etem;
+                color:$ColorBlack;
+                text-decoration: none;
+            }
+        }
+        .btn {
+            z-index: 1;
+            background-color: #a5d6f1;
+            border: 2px solid $ColorBlack;
+            position: fixed;
+            left: 20px;
+            top: 340px;
+            @include btn992;
+            & a{
+                @include talk992;
+                color:$ColorBlack;
+            }
+            transform: translateX(-150%);
+            transition: transform .5s;
+        }
+    }
+    .nav-taggle{
+        display: block;
+        opacity: 0;
+    }
+    .nav-label{
+        display: block;
+        overflow: hidden;
+    }
+    .nav-label .line{
+        display: block;
+        transform: translateY(10px);
+        transition: transform .1s;
+        
+    }
+    .nav-taggle:checked ~ .site-nav__list{
+        transform: translateX(1%);
+            transition: transform .5s;
+    }
+    .nav-taggle:checked ~ .btn{
+        transform: translateX(1%);
+            transition: transform .5s;
+    }
+    .nav-taggle:checked ~ .nav-label .line-3{
+        opacity: 0;
+    }
+    .nav-taggle:checked ~ .nav-label .line-1{
+    transform: translateY(20px) rotate(-225deg);
+    }
+    .nav-taggle:checked ~ .nav-label .line-2{
+    transform: translateY(9px) rotate(225deg);
+    }
+
+}
